@@ -1,5 +1,59 @@
 <% layout("/layouts/boilerplates") -%>
+<style>
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
+.review-card {
+  flex: 1 1 300px;  
+  min-width: 500px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    flex: 1 1 100%;  
+  }
+}
+.starability-result {
+    display: inline-block;
+    max-width: 100%; 
+  display: inline-block;  
+  white-space: nowrap;
+  font-size: 2rem;
+    line-height: 1; 
+}
+@media (max-width: 480px) {
+  .starability-result {
+    font-size: 1.2rem; 
+  }
+}
+#map {
+  width: 100%;  
+  max-width: 800px;      
+  height: 400px;     
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin: 0 auto;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  #map {
+    height: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #map {
+    height: 250px;
+  }
+}
+
+</style>
 <script>
   const mapToken = "<%= process.env.MAP_TOKEN %>";
 </script>

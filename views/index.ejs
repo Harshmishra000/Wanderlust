@@ -4,22 +4,31 @@
   margin-top: 2rem;
   margin-left: 4rem;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  flex-wrap: wrap; 
   gap: 1rem;
 }
 
 .filter {
-  text-decoration: none;
-  color: black;
-  margin-right: 2rem;
-  opacity: 0.6;
-  text-align: center;
-  font-size: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.filter i {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  margin-right: 2.2rem;
+}
+
+.filter p {
+  margin: 0;
+  font-size: 0.9rem;
 }
 
 .filter:hover {
@@ -29,12 +38,14 @@
 
 .tax-toggle {
   border: 1px solid black;
-  padding: 1rem;
-  height: 3.25rem;
+  padding: 0.5rem 1rem;
   border-radius: 1rem;
   display: flex;
   align-items: center;
-  white-space: nowrap; 
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: 4rem; 
+  size: 2rem;
 }
 
 .tax-info {
@@ -43,35 +54,47 @@
 
 @media (max-width: 768px) {
   #filters {
-    margin-left: 1rem; 
+    margin-left: 1rem;
     justify-content: center;
-    gap: 0.8rem; 
+    gap: 0.8rem;
   }
 
   .filter {
     font-size: 0.9rem;
-    margin-right: 1rem;
+  }
+
+  .filter i {
+    font-size: 1.3rem;
   }
 
   .tax-toggle {
     font-size: 0.85rem;
-    padding: 0.8rem;
+    padding: 0.5rem 0.8rem;
     height: auto;
   }
 }
 
 @media (max-width: 480px) {
   #filters {
-    flex-direction: column; 
-    align-items: flex-start; 
+    flex-direction: column;
+    align-items: flex-start;
     margin-left: 1rem;
     gap: 0.5rem;
   }
 
   .filter {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
+    flex-direction: row;
+    align-items: center;
     font-size: 0.85rem;
+  }
+
+  .filter i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .filter p {
+    margin: 0;
   }
 
   .tax-toggle {
@@ -83,74 +106,61 @@
 }
 </style>
 
+<div id="filters">
+  <a href="/listings/category/trending" class="filter">
+    <i class="fa-solid fa-fire"></i>
+    <p>Trending</p>
+  </a>
+  <a href="/listings/category/rooms" class="filter">
+    <i class="fa-solid fa-bed"></i>
+    <p>Rooms</p>
+  </a>
+  <a href="/listings/category/iconic%20cities" class="filter">
+    <i class="fa-solid fa-mountain-city"></i>
+    <p>Iconic Cities</p>
+  </a>
+  <a href="/listings/category/mountain" class="filter">
+    <i class="fa-solid fa-mountain"></i>
+    <p>Mountain</p>
+  </a>
+  <a href="/listings/category/castle" class="filter">
+    <i class="fa-brands fa-fort-awesome"></i>
+    <p>Castle</p>
+  </a>
+  <a href="/listings/category/amazing pools" class="filter">
+    <i class="fa-solid fa-person-swimming"></i>
+    <p>Amazing Pools</p>
+  </a>
+  <a href="/listings/category/camping" class="filter">
+    <i class="fa-solid fa-campground"></i>
+    <p>Camping</p>
+  </a>
+  <a href="/listings/category/farms" class="filter">
+    <i class="fa-solid fa-cow"></i>
+    <p>Farms</p>
+  </a>
+  <a href="/listings/category/arctic" class="filter">
+    <i class="fa-solid fa-snowflake"></i>
+    <p>Arctic</p>
+  </a>
+  <a href="/listings/category/dome" class="filter">
+    <i class="fa-solid fa-igloo"></i>
+    <p>Dome</p>
+  </a>
+  <a href="/listings/category/boat" class="filter">
+    <i class="fa-solid fa-ship"></i>
+    <p>Boat</p>
+  </a>
 
-  <div id="filters">
-    <a href="/listings/category/trending" class="filter">
-      <i class="fa-solid fa-fire"></i>
-      <p>Trending</p>
-    </a>
-
-    <a href="/listings/category/rooms" class="filter">
-      <i class="fa-solid fa-bed"></i>
-      <p>Rooms</p>
-    </a>
-
-    <a href="/listings/category/iconic%20cities" class="filter">
-      <i class="fa-solid fa-mountain-city"></i>
-      <p>Iconic Cities</p>
-    </a>
-
-    <a href="/listings/category/mountain" class="filter">
-      <i class="fa-solid fa-mountain"></i>
-      <p>Mountain</p>
-    </a>
-
-    <a href="/listings/category/castle" class="filter">
-      <i class="fa-brands fa-fort-awesome"></i>
-      <p>Castle</p>
-    </a>
-
-    <a href="/listings/category/amazing pools" class="filter">
-      <i class="fa-solid fa-person-swimming"></i>
-      <p>Amazing Pools</p>
-    </a>
-
-    <a href="/listings/category/camping" class="filter">
-      <i class="fa-solid fa-campground"></i>
-      <p>Camping</p>
-    </a>
-
-    <a href="/listings/category/farms" class="filter">
-      <i class="fa-solid fa-cow"></i>
-      <p>Farms</p>
-    </a>
-
-    <a href="/listings/category/arctic" class="filter">
-      <i class="fa-solid fa-snowflake"></i>
-      <p>Arctic</p>
-    </a>
-
-    <a href="/listings/category/dome" class="filter">
-      <i class="fa-solid fa-igloo"></i>
-      <p>Dome</p>
-    </a>
-
-    <a href="/listings/category/boat" class="filter">
-      <i class="fa-solid fa-ship"></i>
-      <p>Boat</p>
-    </a>
-
-    <div class="tax-toggle">
-      <div class="form-check-reverse form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-        <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
-      </div>
+  <div class="tax-toggle">
+    <div class="form-check-reverse form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+      <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
     </div>
   </div>
+</div>
 
-      
-
-
+    <ul>
 <div class="container mt-3">
   <% if (category) { %>
     <h3 class="text-center"><%= category %></h3>

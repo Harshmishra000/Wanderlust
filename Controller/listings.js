@@ -13,7 +13,7 @@ module.exports.index = async (req, res) => {
     };
 };
 module.exports.renderNewForm = (req,res) => {
-    res.render("creat.ejs");
+    res.render("creat.ejs", { listing: undefined });
 };
 
 module.exports.showListing = (async (req, res) => {

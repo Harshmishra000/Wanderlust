@@ -23,24 +23,22 @@
         <input  name="listing[image]" class="form-control" type="file"/>
         <div class="invalid-feedback">Image should be valid</div>
         </div>
-        <label for="category" class="form-label">Category</label>
-        <label for="category" class="form-label">Category</label>
-        <div class="mb-3">
-          <option value="" disabled selected hidden>--Select Category--</option>
-          <select name="listing[category]" class="form-control drop-down" required>
-            <option value="rooms" <%= listing.category === "rooms" ? "selected" : "" %>>Rooms</option>
-            <option value="trending" <%= listing.category === "trending" ? "selected" : "" %>>Trending</option>
-            <option value="mountain" <%= listing.category === "mountain" ? "selected" : "" %>>Mountain</option>
-            <option value="iconic cities" <%= listing.category === "iconic cities" ? "selected" : "" %>>Iconic Cities</option>
-            <option value="amazing pools" <%= listing.category === "amazing pools" ? "selected" : "" %>>Amazing Pools</option>
-            <option value="castle" <%= listing.category === "castle" ? "selected" : "" %>>Castle</option>
-            <option value="farms" <%= listing.category === "farms" ? "selected" : "" %>>Farms</option>
-            <option value="camping" <%= listing.category === "camping" ? "selected" : "" %>>Camping</option>
-            <option value="dome" <%= listing.category === "dome" ? "selected" : "" %>>Dome</option>
-            <option value="arctic" <%= listing.category === "arctic" ? "selected" : "" %>>Arctic</option>
-          </select>
-          <option value="boat" <%= listing.category === "boat" ? "selected" : "" %>>Boat</option>
-
+<div class="mb-3">
+  <label for="category" class="form-label">Category</label>
+  <select name="listing[category]" class="form-control drop-down" required>
+    <option value="" disabled selected hidden>--Select Category--</option>
+    <option value="rooms" <%= listing?.category === "rooms" ? "selected" : "" %>>Rooms</option>
+    <option value="trending" <%= listing?.category === "trending" ? "selected" : "" %>>Trending</option>
+    <option value="mountain" <%= listing?.category === "mountain" ? "selected" : "" %>>Mountain</option>
+    <option value="iconic cities" <%= listing?.category === "iconic cities" ? "selected" : "" %>>Iconic Cities</option>
+    <option value="amazing pools" <%= listing?.category === "amazing pools" ? "selected" : "" %>>Amazing Pools</option>
+    <option value="castle" <%= listing?.category === "castle" ? "selected" : "" %>>Castle</option>
+    <option value="farms" <%= listing?.category === "farms" ? "selected" : "" %>>Farms</option>
+    <option value="camping" <%= listing?.category === "camping" ? "selected" : "" %>>Camping</option>
+    <option value="dome" <%= listing?.category === "dome" ? "selected" : "" %>>Dome</option>
+    <option value="arctic" <%= listing?.category === "arctic" ? "selected" : "" %>>Arctic</option>
+    <option value="boat" <%= listing?.category === "boat" ? "selected" : "" %>>Boat</option>
+  </select>
 
 
          <div class="invalid-feedback">Category should be valid</div>
